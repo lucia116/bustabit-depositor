@@ -1,0 +1,17 @@
+{
+  "name": "bv-notifier",
+  "description": "An alerting service for bitcoin transactions.",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "~0.7.0",
+    "better-assert": "~1.0.0",
+    "bitcoin": "~2.1.2",
+    "bitcoinjs-lib": "git+https://github.com/bitcoinjs/bitcoinjs-lib.git#490b34852d307519af6ffb370e07dfd828891b28",
+    "pg": "~4.3.0"
+  },
+  "scripts": {
+    "start-dev": "env $(cat .env | xargs) nodemon daemon.js",
+    "start": "env $(cat .env | xargs) forever start daemon.js"
+  }
+}
